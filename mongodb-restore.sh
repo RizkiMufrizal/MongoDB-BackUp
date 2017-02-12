@@ -3,10 +3,10 @@
 
 HOST="192.168.100.113"
 PORT="27017"
-REMOTE_DB="myremote"
+REMOTE_DB="$2"
 USER=""
 PASS=""
-PATH_BACKUP="/var/backups/mongobackups/02-2017/08-02-2017/2017-02-08-11:41:25/th-prod-2016/"
+PATH_BACKUP="$1"
 
 mongorestore $PATH_BACKUP --host=$HOST --port=$PORT --db=$REMOTE_DB --username=$USER --password=$PASS
 echo "Done";
